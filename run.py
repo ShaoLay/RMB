@@ -13,7 +13,16 @@ import time
 # 连接手机
 d = u2.connect()
 
-# 签到领金币
+
+def sign_in():
+    """签到领金币"""
+    d.click(0.636, 0.97)
+
+
+def click_index():
+    """点击首页"""
+    d.click(0.636, 0.97)
+
 
 def ad():
     """看广告"""
@@ -26,7 +35,9 @@ def ad():
         d.click(0.08, 0.073)
         i = i + 1
 
+
 # 刷视频金币
+
 
 # 每隔20分钟点击宝箱
 if __name__ == '__main__':
