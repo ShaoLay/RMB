@@ -25,16 +25,21 @@ def click_index():
     d.click(0.636, 0.97)
 
 
+def click_money():
+    """点击去赚钱按钮"""
+    d.click(0.632, 0.974)
+
+
 def ad():
     """看广告"""
-    d.click(0.622, 0.975)
-    d.swipe_ext("up", 1)
+    d.click(0.622, 0.975)   # 点击赚钱按钮
+    d.swipe_ext("up", 1)    # 向下滑动屏幕
     i = 0
     while(i < 20):
-        d.click(0.869, 0.803)
-        time.sleep(40)
-        d.click(0.08, 0.073)
-        i = i + 1
+        d.click(0.869, 0.803)   # 点击看广告
+        time.sleep(40)          # 停顿40秒
+        d.click(0.08, 0.073)    # 关闭广告
+        i = i + 1               # 再次循环
 
 
 def index():
@@ -46,6 +51,18 @@ def index():
     time.sleep(20)              # 停顿20秒
     d.swipe_ext("up", 1)        # 滑动视频
 
-# 每隔20分钟点击宝箱
+
+def live():
+    """直播间领金币"""
+    i = 0
+    while(i < 10):
+        d.click(0.632, 0.974)
+        d.swipe_ext("up", 1)
+        d.swipe_ext("up", 0.2)
+        d.click(0.849, 0.732)
+        time.sleep(60)
+        d.swipe_ext("up", 1)
+
+
 if __name__ == '__main__':
-    pass
+    ad()
