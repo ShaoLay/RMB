@@ -42,17 +42,27 @@ def ad():
         i = i + 1               # 再次循环
 
 
+
+def chest():
+    """开宝箱"""
+    d.click(0.809, 0.869)
+
+
 def index():
     """
     首页刷视频金币
     :return:
     """
-    i = 0
-    while(i < 60):
-        d(resourceId="android:id/text1", text="首页").click()
-        time.sleep(20)              # 停顿20秒
-        d.swipe_ext("up", 1)        # 滑动视频
-        i = i + 1
+    while True:
+        i = 0
+        while(i < 3):
+            d(resourceId="android:id/text1", text="首页").click()
+            time.sleep(20)              # 停顿20秒
+            d.swipe_ext("up", 1)        # 滑动视频
+            i = i + 1
+        click_money()
+        time.sleep(10)
+        index()
 
 
 
