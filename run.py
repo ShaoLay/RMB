@@ -35,12 +35,11 @@ def ad():
     d.click(0.622, 0.975)   # 点击赚钱按钮
     d.swipe_ext("up", 1)    # 向下滑动屏幕
     i = 0
-    while(i < 20):
+    while i < 20:
         d.click(0.869, 0.803)   # 点击看广告
         time.sleep(40)          # 停顿40秒
         d.click(0.08, 0.073)    # 关闭广告
         i = i + 1               # 再次循环
-
 
 
 def chest():
@@ -55,7 +54,7 @@ def index():
     """
     while True:
         i = 0
-        while(i < 3):
+        while i < 60:
             d(resourceId="android:id/text1", text="首页").click()
             time.sleep(20)              # 停顿20秒
             d.swipe_ext("up", 1)        # 滑动视频
@@ -65,11 +64,10 @@ def index():
         index()
 
 
-
 def live():
     """直播间领金币"""
     i = 0
-    while(i < 10):
+    while i < 10:
         d.click(0.632, 0.974)
         d.swipe_ext("up", 1)
         d.swipe_ext("up", 0.2)
