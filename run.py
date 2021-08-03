@@ -47,9 +47,13 @@ def index():
     首页刷视频金币
     :return:
     """
-    d(resourceId="android:id/text1", text="首页").click()
-    time.sleep(20)              # 停顿20秒
-    d.swipe_ext("up", 1)        # 滑动视频
+    i = 0
+    while(i < 60):
+        d(resourceId="android:id/text1", text="首页").click()
+        time.sleep(20)              # 停顿20秒
+        d.swipe_ext("up", 1)        # 滑动视频
+        i = i + 1
+
 
 
 def live():
@@ -65,4 +69,8 @@ def live():
 
 
 if __name__ == '__main__':
+    click_money()
+    click_index()
+    click_money()
     ad()
+    index()
