@@ -10,6 +10,7 @@
 import uiautomator2 as u2
 import time
 
+
 # 连接手机
 d = u2.connect()
 
@@ -36,8 +37,14 @@ def ad():
         i = i + 1
 
 
-# 刷视频金币
-
+def index():
+    """
+    首页刷视频金币
+    :return:
+    """
+    d(resourceId="android:id/text1", text="首页").click()
+    time.sleep(20)              # 停顿20秒
+    d.swipe_ext("up", 1)        # 滑动视频
 
 # 每隔20分钟点击宝箱
 if __name__ == '__main__':
