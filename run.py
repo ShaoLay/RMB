@@ -61,6 +61,8 @@ def index():
             i = i + 1
         click_money()
         time.sleep(10)
+        chest()
+        time.sleep(2)
         index()
 
 
@@ -77,8 +79,9 @@ def live():
 
 
 if __name__ == '__main__':
-    click_money()
-    click_index()
-    click_money()
-    ad()
+    # click_money()
+    # click_index()
+    # click_money()
+    # live()
+    # ad()
     index()
