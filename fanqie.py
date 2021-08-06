@@ -17,6 +17,8 @@ def read():
     """
     阅读刷金币
     """
+    d.click(0.722, 0.967)
+    d.click(0.197, 0.29)
     i = 0
     while i < 100:
         d.swipe_ext("left",0.6)
@@ -30,6 +32,8 @@ def chest():
     开宝箱
     """
     d.click(0.899, 0.8)
+    time.sleep(1)
+    d.click(0.5, 0.733)
 
 
 def video():
@@ -49,7 +53,7 @@ def task():
     """
     点击任务按钮
     """
-    pass
+    d.click(0.508, 0.9)
 
 
 if __name__ == '__main__':
