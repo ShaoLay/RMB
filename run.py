@@ -63,7 +63,6 @@ def index():
         time.sleep(10)
         chest()
         time.sleep(2)
-        index()
 
 
 def live():
