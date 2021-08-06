@@ -36,7 +36,13 @@ def video():
     """
     看广告视频刷金币，每个视频大概停留15-20秒
     """
-    pass
+    i = 0
+    while i < 10:
+        d.swipe_ext("up", 0.6)
+        d.click(0.789, 0.59)
+        time.sleep(25)
+        d.click(0.894, 0.0)
+        i = i + 1
 
 
 def task():
