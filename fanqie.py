@@ -29,7 +29,7 @@ def chest():
     """
     开宝箱
     """
-    pass
+    d.click(0.899, 0.8)
 
 
 def video():
