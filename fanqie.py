@@ -17,7 +17,12 @@ def read():
     """
     阅读刷金币
     """
-    pass
+    i = 0
+    while i < 100:
+        d.swipe_ext("left",0.6)
+        time.sleep(15)
+        i = i + 1
+        print("第" + i + "次翻页")
 
 
 def chest():
