@@ -24,7 +24,7 @@ def read():
         d.swipe_ext("left",0.6)
         time.sleep(15)
         i = i + 1
-        print("第" + i + "次翻页")
+        print("第" + str(i) + "次翻页")
 
 
 def chest():
@@ -57,4 +57,4 @@ def task():
 
 
 if __name__ == '__main__':
-    pass
+    read()

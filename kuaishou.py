@@ -2,7 +2,7 @@
 @desc:
 @author: ShaoLay
 @email: shaoleei@126.com
-@file: run.py
+@file: kuaishou.py
 @time: 2021/08/02 下午12:37
 @envirmonent: PyCharm
 """
@@ -33,10 +33,11 @@ def click_money():
 def ad():
     """看广告"""
     d.click(0.622, 0.975)   # 点击赚钱按钮
-    d.swipe_ext("up", 1)    # 向下滑动屏幕
+    d.swipe_ext("up", 0.6)
+    d.swipe_ext("up", 0.6)  # 向下滑动屏幕
     i = 0
     while i < 20:
-        d.click(0.869, 0.803)   # 点击看广告
+        d.click(0.844, 0.5)   # 点击看广告
         time.sleep(40)          # 停顿40秒
         d.click(0.08, 0.073)    # 关闭广告
         i = i + 1               # 再次循环
@@ -52,13 +53,15 @@ def index():
     首页刷视频金币
     :return:
     """
+    d(resourceId="android:id/text1", text="首页").click()
     while True:
         i = 0
         while i < 60:
-            d(resourceId="android:id/text1", text="首页").click()
             time.sleep(20)              # 停顿20秒
             d.swipe_ext("up", 1)        # 滑动视频
             i = i + 1
+            print("第" + str(i) + "次翻页")
+
         click_money()
         time.sleep(10)
         chest()
