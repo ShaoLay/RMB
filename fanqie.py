@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time : 2021/8/6 下午10:29
 # @Author : ShaoLay
@@ -20,7 +20,7 @@ def read():
     d.click(0.722, 0.967)
     d.click(0.197, 0.29)
     i = 0
-    while i < 100:
+    while i < 300:
         d.swipe_ext("left",0.6)
         time.sleep(15)
         i = i + 1
@@ -57,4 +57,5 @@ def task():
 
 
 if __name__ == '__main__':
+    # video()
     read()
